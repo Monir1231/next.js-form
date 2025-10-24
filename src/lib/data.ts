@@ -1,12 +1,7 @@
-interface Iperson {
-  id: number ;
-  name:string ;
-  email : string
-
-}
+import { Iparson } from "@/type/type"
 
 
-export const persons:Iperson[] = [
+export const Parsons:Iparson[] = [
   {
     id:1,
     name:"Monirul",

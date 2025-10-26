@@ -2,7 +2,7 @@ import { ParsonButton, ContactForm } from "@/component";
 import Image from "next/image";
 import ContactUs from "@/component/contact";
 
-import { persons } from "@/lib/data";
+import {Parsons } from "@/lib/data";
 
 const HomePage = () => {
   return (

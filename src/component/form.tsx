@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { Input,Textarea} from './input'
 import { Button } from './Button'
 
@@ -13,8 +13,9 @@ interface ContactForm {
 }
 
  const defaultValue:ContactForm = { name:"",email:"",message:"",firstName:"",lastName:""}
+  const TProps = {activeParson:Iparson[]}
 
-export const ContactForm = () => {
+export const ContactForm:FC<TProps> = ({}) => {
 
   const [data,setdata] = useState<ContactForm>(defaultValue)
   // const [FirstName,setFirstName] = useState("")
@@ -29,7 +30,7 @@ export const ContactForm = () => {
   // },[FirstName,LastName])
 
   
-  type InputEvent = ChangeEvent <HTMLInputElement | HTMLTextAreaElement>
+  type InputEvent = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 
   const handleChange = (e:InputEvent) =>{
     const {name,value} = e.target || {}

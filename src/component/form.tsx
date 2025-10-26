@@ -3,6 +3,7 @@
 import React, { FC, useEffect, useState } from 'react'
 import { Input,Textarea} from './input'
 import { Button } from './Button'
+import { Iparson } from '@/type/type'
 
 interface ContactForm {
   firstName?:string
@@ -13,7 +14,7 @@ interface ContactForm {
 }
 
  const defaultValue:ContactForm = { name:"",email:"",message:"",firstName:"",lastName:""}
-  const TProps = {activeParson:Iparson[]}
+  type TProps = {activeParson:Iparson[]}
 
 export const ContactForm:FC<TProps> = ({}) => {
 
